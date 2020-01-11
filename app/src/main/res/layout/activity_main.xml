@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txt_john"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/john_name"
+        android:textSize="20dp"
+        android:layout_margin="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/icon_navgation_pin"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/ic_location_pin"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_john"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintLeft_toRightOf="@+id/txt_cityName" />
+
+    <TextView
+        android:id="@+id/txt_cityName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/city_name"
+        android:textSize="15dp"
+        app:layout_constraintTop_toBottomOf="@id/txt_john"
+        app:layout_constraintLeft_toRightOf="@+id/icon_navgation_pin"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_peach"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="80dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/txt_john">
+
+        <ImageView
+            android:id="@+id/img_peach"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:src="@drawable/peach"
+            android:layout_marginTop="5dp"
+            app:layout_constraintLeft_toRightOf="@id/txt_cityName"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_follow"
+        android:layout_width="75dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/btn_follow"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_cityName" />
+
+    <TextView
+        android:id="@+id/txt_post_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="34"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="35dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_follow"/>
+
+    <TextView
+        android:id="@+id/txt_follower_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1256"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="50dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_follow"
+        app:layout_constraintLeft_toRightOf="@id/txt_post_count"/>
+
+    <TextView
+        android:id="@+id/txt_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Posts"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_post_count"
+        android:layout_marginLeft="40dp"/>
+
+    <TextView
+        android:id="@+id/txt_follower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Followers"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintLeft_toRightOf="@id/txt_post"
+        app:layout_constraintTop_toBottomOf="@id/txt_follower_count"/>
+
+    <ImageView
+        android:id="@+id/img_cartoon"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:src="@drawable/cartoon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/img_cuteanime"
+        app:layout_constraintTop_toBottomOf="@id/txt_post"
+        android:layout_marginTop="25dp" />
+
+    <ImageView
+        android:id="@+id/img_cuteanime"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:src="@drawable/cuteanime"
+        app:layout_constraintLeft_toRightOf="@+id/img_cartoon"
+        app:layout_constraintRight_toLeftOf="@+id/img_doll"
+        app:layout_constraintTop_toBottomOf="@id/txt_post"
+        android:layout_marginTop="25dp"/>
+
+    <ImageView
+        android:id="@+id/img_doll"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:src="@drawable/cartoon"
+        android:layout_marginTop="25dp"
+        app:layout_constraintLeft_toRightOf="@+id/img_cuteanime"
+        app:layout_constraintRight_toLeftOf="@+id/img_human"
+        app:layout_constraintTop_toBottomOf="@id/txt_post"/>
+
+    <ImageView
+        android:id="@+id/img_human"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:src="@drawable/cuteanime"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toBottomOf="@id/txt_follower"
+        app:layout_constraintLeft_toRightOf="@+id/img_doll"
+        app:layout_constraintRight_toLeftOf="@id/img_ice_cream"/>
+
+    <ImageView
+        android:id="@+id/img_ice_cream"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:src="@drawable/cartoon"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toBottomOf="@id/txt_follower"
+        app:layout_constraintLeft_toRightOf="@+id/img_human"
+        app:layout_constraintRight_toRightOf="parent"/>
+    
+    <ImageView
+        android:id="@+id/ic_basketball"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_basketball"
+        app:layout_constraintTop_toBottomOf="@+id/img_cartoon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="25dp"
+        app:layout_constraintLeft_toRightOf="@+id/ic_facebook"/>
+
+    <ImageView
+        android:id="@+id/ic_facebook"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_facebook"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="25dp"
+        app:layout_constraintTop_toBottomOf="@id/img_cuteanime"
+        app:layout_constraintLeft_toRightOf="@id/ic_basketball"
+        app:layout_constraintRight_toLeftOf="@+id/ic_firefox"/>
+
+    <ImageView
+        android:id="@+id/ic_firefox"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_firefox"
+        app:layout_constraintTop_toBottomOf="@id/img_doll"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="25dp"
+        app:layout_constraintLeft_toRightOf="@id/ic_facebook"
+        app:layout_constraintRight_toLeftOf="@id/ic_behance"/>
+
+    <ImageView
+        android:id="@+id/ic_behance"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/ic_behance"
+        app:layout_constraintLeft_toRightOf="@id/ic_firefox"
+        app:layout_constraintRight_toLeftOf="@+id/ic_twitter"
+        app:layout_constraintTop_toBottomOf="@id/img_human" />
+
+    <ImageView
+        android:id="@+id/ic_twitter"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_twitter"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="25dp"
+        app:layout_constraintTop_toBottomOf="@id/img_ice_cream"
+        app:layout_constraintLeft_toRightOf="@id/ic_behance"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/txt_about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_about"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ic_basketball"/>
+
+    <TextView
+        android:id="@+id/txt_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Him poetic eye. Searched any remedies.Trial. Was
+poverty a schemes him he dressing mountains and as
+suprise haven't subject and could be entered would in the
+of be not posts, doing the never publication legs."
+        android:layout_marginLeft="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_about"
+        android:layout_marginTop="25dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

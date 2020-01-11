@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">classwork1</string>
+    <string name="john_name"><b><s>John MacDonald</s></b></string>
+    <string name="city_name"><b>Los Angles,CA</b></string>
+    <string name="btn_follow">Follow</string>
+    <string name="txt_about">About</string>
+    <string name="txt_description">Him poeticc eye.</string>
+</resources>
